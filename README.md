@@ -1,5 +1,7 @@
 # 🔗 Linktree Clone - Angular
 
+![screen](https://github.com/eumatoliveira/Faketree/blob/main/Screenshot_13.png)
+
 Clone profissional do Linktree desenvolvido com **Angular**, **TypeScript** e **CSS moderno**. Projeto criado para demonstrar habilidades de front-end e servir como peça de portfólio.
 
 ![Desktop View](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
