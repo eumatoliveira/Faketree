@@ -1,0 +1,108 @@
+/* Container do perfil */
+.profile-container {
+  text-align: center;
+  padding: 2rem 1rem;
+  animation: fadeInDown 0.6s ease-out;
+}
+
+/* Wrapper do avatar com efeito de pulso */
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.avatar-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  opacity: 0.3;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Avatar */
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--glass-border);
+  background: var(--glass-bg);
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+}
+
+/* Nome do perfil */
+.profile-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+/* Bio do perfil */
+.profile-bio {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.6;
+  animation: fadeIn 0.8s ease-out 0.4s both;
+}
+
+/* Animações */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .profile-name {
+    font-size: 1.75rem;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+}

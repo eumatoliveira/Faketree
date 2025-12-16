@@ -1,0 +1,13 @@
+<div class="links-container">
+  <!-- Renderiza cada link com animação escalonada -->
+  <div 
+    *ngFor="let link of links; let i = index"
+    class="link-item"
+    [style.animation-delay]="getAnimationDelay(i)"
+  >
+    <app-link-button 
+      [link]="link"
+      (linkClick)="onLinkClicked($event)"
+    ></app-link-button>
+  </div>
+</div>

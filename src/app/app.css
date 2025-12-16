@@ -1,0 +1,89 @@
+/* Container principal da aplicação */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Header com efeito decorativo */
+.app-header {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+/* Conteúdo principal */
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-md);
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Espaçador entre componentes */
+.spacer {
+  height: 2rem;
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-md);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+.app-footer p {
+  margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .app-header {
+    height: 60px;
+  }
+  
+  .spacer {
+    height: 1.5rem;
+  }
+  
+  .app-main {
+    padding: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    height: 40px;
+  }
+  
+  .spacer {
+    height: 1rem;
+  }
+}

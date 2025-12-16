@@ -1,0 +1,12 @@
+<div class="profile-container">
+  <!-- Avatar com animação de entrada -->
+  <div class="avatar-wrapper">
+    <img [src]="profileData.avatar" [alt]="profileData.name + ' avatar'" class="avatar" />
+  </div>
+
+  <!-- Nome do usuário -->
+  <h1 class="profile-name">{{ profileData.name }}</h1>
+
+  <!-- Bio/descrição -->
+  <p class="profile-bio">{{ profileData.bio }}</p>
+</div>

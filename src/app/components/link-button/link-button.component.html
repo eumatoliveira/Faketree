@@ -1,0 +1,17 @@
+<a 
+  [href]="link.url"
+  (click)="onLinkClick($event)"
+  class="link-button"
+  [attr.data-category]="link.category"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <!-- Ícone do link -->
+  <span class="link-icon" aria-hidden="true">{{ link.icon }}</span>
+  
+  <!-- Título do link -->
+  <span class="link-title">{{ link.title }}</span>
+  
+  <!-- Ícone de seta indicando link externo -->
+  <span class="link-arrow" aria-hidden="true">→</span>
+</a>
